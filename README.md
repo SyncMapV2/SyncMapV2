@@ -1,4 +1,4 @@
-# Experiment Tables for SyncMapV2
+# Experiment Analysis for SyncMapV2
 
 ## Table 1: SyncMapV2 Ablation Study
 
