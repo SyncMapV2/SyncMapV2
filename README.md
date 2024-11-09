@@ -35,6 +35,26 @@ This table evaluates the robustness of the DFC, Orig. SyncMap, and SyncMapV2 mod
 | **Improvements (vs. Orig. SyncMap, %)** | **31%**   | **32%**           | **31%**       | **17%**   | **26%** | **21%**                 | **17%**   | **18%** | **20%** | **30%**                 | **31%**   | **25%** | **27%** | **30%**               | **29%**  | **29%** | **31%** |  **26%** |
 
 
+### Adaptive Learning Rate (ALR)
+ALR dynamically adjusts the learning rate based on system dynamics, specifically aiding in the control of fast-moving dynamics as the system approaches equilibrium. This helps stabilize the dynamics, leading to an improvement of 15.5% under clean conditions and 8.1% under noisy conditions. The results show that ALR reduces over-responsiveness and improves the accuracy of convergence, allowing for a more robust segmentation process.
+
+### Symmetrical Activation (SA)
+While SA was originally proposed in prior work to balance dynamics effectively in a temporal setting, it did not perform as expected when applied independently to SyncMap for image segmentation. In isolation, it caused a performance drop (-35.5% in clean, -39.5% under noise). However, when combined with other techniques, SA contributes to a balanced update of dynamics, especially when paired with stabilizing mechanisms like ALR and MovMean. This finding highlights SA's role as a complementary, rather than standalone, component in this application.
+
+### Space Normalization (SNorm)
+SNorm standardizes the spatial distribution to zero mean and unit variance at each time step, addressing potential skew in spatial points and improving clustering consistency. By providing a stable spatial reference, SNorm offers a 12.4% improvement in clean conditions and 9.3% under noise. This component ensures that patch similarity is consistently evaluated, which aids in accurate grouping, especially under noisy conditions.
+
+### Moving Average (MovMean)
+MovMean provides temporal smoothing by averaging the system's dynamics over a defined history window, thus capturing broader patterns in patch similarity rather than relying on a single-time snapshot. MovMean shows the most significant improvement on its own, with a gain of 19.9% in clean conditions and 19.5% under noise, underscoring its importance in achieving stable segmentation results. By reducing “snapshot bias,” MovMean enables more reliable clustering in both clean and noisy environments.
+
+### Leaking Rate (LeakR)
+LeakR introduces a global rate to moderate the speed of system dynamics, preventing the system from fluctuating too rapidly. This slower dynamic allows the system to “settle” more predictably, supporting stable clustering and segmentation. LeakR achieves a performance gain of 12.4% in clean conditions and 8.1% under noise, showing its impact in aligning the dynamics to a steady progression as equilibrium approaches.
+
+### Combined System (SyncMapV2)
+Integrating all five components achieves the highest performance boost, with an improvement of 31.5% in clean and 31.4% in noisy conditions. This synergy shows that each component supports and complements the others:
+- ALR, MovMean, and LeakR stabilize and smooth the dynamics, facilitating controlled and reliable convergence.
+- SNorm ensures spatial consistency for clustering, making group formations more stable and accurate.
+- SA acts as a balance-enhancing factor when combined with the other components.
 
 
 
