@@ -1,6 +1,6 @@
 ## Hi there 👋
 
-|                       | **SyncMapV2 Ablation**                 |      |         |                  |      | **mIoU**        |                 | **Improvements from SyncMap**    |                   |
+|         **SyncMapV2 Ablation**         |                 |      |         |                  |      | **mIoU**        | <--       | **Improvements from SyncMap**    |  <--                 |
 |-----------------------|----------------------------------------|------|---------|------------------|------|-----------------|-----------------|-----------------------------------|-------------------|
 | **Model**             | Adaptive Learning Rate                | Symmetrical Activations | Space Normalization | Moving Average | Leaking Rate | Clean           | Gaussian S3      | Clean                           | Gaussian S3       |
 | **Orig. SyncMap**     | -                                     | -    | -       | -                | -    | 0.251           | 0.236           | 0%                               | 0%                |
@@ -17,7 +17,7 @@
 
 ---
 
-| **Corruption Type**         | **Clean** | **Gaussian Noise**      |               |           |      | **Zoom Blur**            |           |         |      | **Snow Weather**           |           |         |      | **Digital Contrast**      |         |      | **Overall** |
+| **Corruption Type**         | **Clean** | **Gaussian Noise**      |      <--         |    <--     |   <--  | **Zoom Blur**            |    <--     |   <--    | <--    | **Snow Weather**           |  <--       |  <--     |  <--   | **Digital Contrast**      | <--      |   <--    | **Overall** |
 |-----------------------------|-----------|--------------------------|---------------|-----------|------|---------------------------|-----------|---------|------|----------------------------|-----------|---------|------|---------------------------|---------|------|-------------|
 | **Method / Severity**       | -         | S1                       | S3            | S5        | **Mean** | S1                       | S3        | S5      | **Mean** | S1                     | S3        | S5      | **Mean** | S1                     | S3      | S5  | **Mean** |
 | **DFC**                     | **0.37**  | 0.26                     | 0.23          | 0.21      | 0.23 | 0.27                     | 0.26      | 0.26    | 0.26 | 0.26                     | 0.25      | 0.23    | 0.25 | 0.27                     | 0.27    | 0.25 | 0.26 |
