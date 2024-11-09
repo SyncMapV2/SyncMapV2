@@ -13,6 +13,7 @@ This table shows an ablation study on various configurations of the SyncMapV2 mo
 | **Norm**              | -                                     | -    | ✅      | -                | -    | 0.282           | 0.258           | 12.4%                            | 9.3%              |
 | **MovMean**           | -                                     | -    | -       | ✅               | -    | 0.301           | 0.282           | 19.9%                            | 19.5%             |
 | **LeakR**             | -                                     | -    | -       | -                | ✅    | 0.282           | 0.255           | 12.4%                            | 8.1%              |
+| **Norm + LeakR**      | -                                     | -    | ✅       | -                | ✅   | 0.31            | 0.28            | 23.0%                           | 19.1%            |
 | **SymmAct + AdpLR**   | ✅                                    | ✅    | -       | -                | -    | 0.17            | 0.20            | -33.6%                           | -17.0%            |
 | **SymmAct + Norm**    | -                                     | ✅    | ✅      | -                | -    | 0.30            | 0.27            | 18.9%                            | 12.9%             |
 | **SymmAct + MovMean** | -                                     | ✅    | -      | ✅               | -    | 0.14            | 0.15            | -45.2%                           | -36.8%            |
