@@ -34,6 +34,8 @@ This table evaluates the robustness of the DFC, Orig. SyncMap, and SyncMapV2 mod
 | **Improvements (vs. DFC, %)** | -12%     | **26%**                  | **32%**       | **34%**   | **31%** | **16%**                 | **16%**   | **16%** | **16%** | **20%**                 | **21%**   | **26%** | **23%** | **20%**                | **22%**  | **30%** | **24%** |  **21%** |
 | **Improvements (vs. Orig. SyncMap, %)** | **31%**   | **32%**           | **31%**       | **17%**   | **26%** | **21%**                 | **17%**   | **18%** | **20%** | **30%**                 | **31%**   | **25%** | **27%** | **30%**               | **29%**  | **29%** | **31%** |  **26%** |
 
+![Figure1](Comparison.png "Figure 1: Example Images")
+![Figure2](Chart1.png "Figure 2: mIoU Comparison")
 
 ### Adaptive Learning Rate (ALR)
 ALR dynamically adjusts the learning rate based on system dynamics, specifically aiding in the control of fast-moving dynamics as the system approaches equilibrium. This helps stabilize the dynamics, leading to an improvement of 15.5% under clean conditions and 8.1% under noisy conditions. The results show that ALR reduces over-responsiveness and improves the accuracy of convergence, allowing for a more robust segmentation process.
